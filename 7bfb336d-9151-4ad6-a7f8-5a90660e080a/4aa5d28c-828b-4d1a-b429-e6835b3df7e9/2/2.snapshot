@@ -1,0 +1,721 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : {
+        "acea3e4b-05bd-319b-a152-b854b2989322" : {
+          "identifier" : "acea3e4b-05bd-319b-a152-b854b2989322",
+          "name" : "AzureStorageCredentialsControllerService"
+        }
+      },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "s",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "514ae570-c0cd-3ebc-9183-7825166e776c",
+            "name" : "PublishKafka",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "b38d3e84-45fc-36d5-8e2f-ce5b881e9533",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "451a94e4-0849-3365-b3f7-3dc32350bae1",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "ad644e65-553e-32c9-912b-0a062a95171d",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "eb21c9d6-6f4e-3bc1-be50-5eacaf932088",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "28704b0a-422f-356d-8a6a-24842923a8a7",
+            "name" : "ConsumeKafka",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "s",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "514ae570-c0cd-3ebc-9183-7825166e776c",
+            "name" : "PublishKafka",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "630a9705-7fe2-375e-875c-bf6e855cb270",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "1b342c7e-c726-3ce7-bb55-707e049fd6ae",
+            "name" : "FetchAzureBlobStorage",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "1b342c7e-c726-3ce7-bb55-707e049fd6ae",
+            "name" : "FetchAzureBlobStorage",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "9f76a0ae-1dcb-332d-bd8e-a2623934e192",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+            "id" : "d94169d0-49cb-37ff-a5b8-d1fbb866de93",
+            "name" : "ListAzureBlobStorage",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "funnels" : [ ],
+        "identifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+        "inputPorts" : [ ],
+        "labels" : [ ],
+        "name" : "Event Streaming Flow",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : -16.0,
+          "y" : -352.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-kafka-0-9-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "s",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "514ae570-c0cd-3ebc-9183-7825166e776c",
+          "name" : "PublishKafka",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 119.1999927808177,
+            "y" : 366.79999252796205
+          },
+          "properties" : {
+            "compression.type" : "none",
+            "ack.wait.time" : "5 secs",
+            "acks" : "0",
+            "bootstrap.servers" : "localhost:9092",
+            "security.protocol" : "PLAINTEXT",
+            "max.request.size" : "1 MB",
+            "max.block.ms" : "5 sec",
+            "partitioner.class" : "org.apache.kafka.clients.producer.internals.DefaultPartitioner",
+            "topic" : "test",
+            "key-attribute-encoding" : "utf-8"
+          },
+          "propertyDescriptors" : {
+            "compression.type" : {
+              "displayName" : "Compression Type",
+              "identifiesControllerService" : false,
+              "name" : "compression.type",
+              "sensitive" : false
+            },
+            "ack.wait.time" : {
+              "displayName" : "Acknowledgment Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "ack.wait.time",
+              "sensitive" : false
+            },
+            "acks" : {
+              "displayName" : "Delivery Guarantee",
+              "identifiesControllerService" : false,
+              "name" : "acks",
+              "sensitive" : false
+            },
+            "bootstrap.servers" : {
+              "displayName" : "Kafka Brokers",
+              "identifiesControllerService" : false,
+              "name" : "bootstrap.servers",
+              "sensitive" : false
+            },
+            "sasl.kerberos.service.name" : {
+              "displayName" : "Kerberos Service Name",
+              "identifiesControllerService" : false,
+              "name" : "sasl.kerberos.service.name",
+              "sensitive" : false
+            },
+            "security.protocol" : {
+              "displayName" : "Security Protocol",
+              "identifiesControllerService" : false,
+              "name" : "security.protocol",
+              "sensitive" : false
+            },
+            "ssl.context.service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "ssl.context.service",
+              "sensitive" : false
+            },
+            "max.request.size" : {
+              "displayName" : "Max Request Size",
+              "identifiesControllerService" : false,
+              "name" : "max.request.size",
+              "sensitive" : false
+            },
+            "kafka-key" : {
+              "displayName" : "Kafka Key",
+              "identifiesControllerService" : false,
+              "name" : "kafka-key",
+              "sensitive" : false
+            },
+            "max.block.ms" : {
+              "displayName" : "Max Metadata Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "max.block.ms",
+              "sensitive" : false
+            },
+            "partitioner.class" : {
+              "displayName" : "Partitioner class",
+              "identifiesControllerService" : false,
+              "name" : "partitioner.class",
+              "sensitive" : false
+            },
+            "topic" : {
+              "displayName" : "Topic Name",
+              "identifiesControllerService" : false,
+              "name" : "topic",
+              "sensitive" : false
+            },
+            "message-demarcator" : {
+              "displayName" : "Message Demarcator",
+              "identifiesControllerService" : false,
+              "name" : "message-demarcator",
+              "sensitive" : false
+            },
+            "key-attribute-encoding" : {
+              "displayName" : "Key Attribute Encoding",
+              "identifiesControllerService" : false,
+              "name" : "key-attribute-encoding",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.kafka.pubsub.PublishKafka",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 10,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "451a94e4-0849-3365-b3f7-3dc32350bae1",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 383.1999927808177,
+            "y" : -129.20000747203795
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "generate-ff-custom-text" : "{\n  \"INVOICE_ID\": \"100002585\",\n  \"ETL_BATCH_ID\": 1593356338159,\n  \"CV_POS_ID\": 192,\n  \"SHOPPING_DATE\": \"2020-06-23 16:24:05\",\n  \"CV_IDENTIFYING_CARD_ID\": -1,\n  \"LINES\": [\n    {\n      \"CV_PRODUCT_ITEM_ID\": 940005,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 8.55,\n      \"LINE_DISCOUNT\": 0.0\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 960270,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 42.65,\n      \"LINE_DISCOUNT\": 10.68\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 723431,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 7.61,\n      \"LINE_DISCOUNT\": 0.0\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 1038318,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 12.74,\n      \"LINE_DISCOUNT\": 0.0\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 1018153,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 17.01,\n      \"LINE_DISCOUNT\": 0.0\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 1018154,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 17.01,\n      \"LINE_DISCOUNT\": 0.0\n    },\n    {\n      \"CV_PRODUCT_ITEM_ID\": 749971,\n      \"LINE_QUANTITY\": 1.0,\n      \"LINE_LIST_PRICE\": 11.03,\n      \"LINE_DISCOUNT\": 0.0\n    }\n  ]\n}",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "1 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-azure-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "1b342c7e-c726-3ce7-bb55-707e049fd6ae",
+          "name" : "FetchAzureBlobStorage",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 7.199992780817695,
+            "y" : 14.799992527962047
+          },
+          "properties" : {
+            "blob" : "${azure.blobname}",
+            "storage-credentials-service" : "acea3e4b-05bd-319b-a152-b854b2989322",
+            "container-name" : "data-container"
+          },
+          "propertyDescriptors" : {
+            "storage-account-name" : {
+              "displayName" : "Storage Account Name",
+              "identifiesControllerService" : false,
+              "name" : "storage-account-name",
+              "sensitive" : true
+            },
+            "storage-sas-token" : {
+              "displayName" : "SAS Token",
+              "identifiesControllerService" : false,
+              "name" : "storage-sas-token",
+              "sensitive" : true
+            },
+            "blob" : {
+              "displayName" : "Blob",
+              "identifiesControllerService" : false,
+              "name" : "blob",
+              "sensitive" : false
+            },
+            "storage-account-key" : {
+              "displayName" : "Storage Account Key",
+              "identifiesControllerService" : false,
+              "name" : "storage-account-key",
+              "sensitive" : true
+            },
+            "proxy-configuration-service" : {
+              "displayName" : "Proxy Configuration Service",
+              "identifiesControllerService" : true,
+              "name" : "proxy-configuration-service",
+              "sensitive" : false
+            },
+            "storage-credentials-service" : {
+              "displayName" : "Storage Credentials",
+              "identifiesControllerService" : true,
+              "name" : "storage-credentials-service",
+              "sensitive" : false
+            },
+            "container-name" : {
+              "displayName" : "Container Name",
+              "identifiesControllerService" : false,
+              "name" : "container-name",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.azure.storage.FetchAzureBlobStorage",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-kafka-0-9-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 5,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "28704b0a-422f-356d-8a6a-24842923a8a7",
+          "name" : "ConsumeKafka",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 751.1999927808176,
+            "y" : -169.20000747203795
+          },
+          "properties" : {
+            "security.protocol" : "PLAINTEXT",
+            "max.poll.records" : "10000",
+            "max-uncommit-offset-wait" : "1 secs",
+            "group.id" : "test",
+            "bootstrap.servers" : "localhost:9092",
+            "topic" : "test",
+            "key-attribute-encoding" : "utf-8",
+            "auto.offset.reset" : "latest"
+          },
+          "propertyDescriptors" : {
+            "security.protocol" : {
+              "displayName" : "Security Protocol",
+              "identifiesControllerService" : false,
+              "name" : "security.protocol",
+              "sensitive" : false
+            },
+            "ssl.context.service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "ssl.context.service",
+              "sensitive" : false
+            },
+            "max.poll.records" : {
+              "displayName" : "Max Poll Records",
+              "identifiesControllerService" : false,
+              "name" : "max.poll.records",
+              "sensitive" : false
+            },
+            "max-uncommit-offset-wait" : {
+              "displayName" : "Max Uncommitted Time",
+              "identifiesControllerService" : false,
+              "name" : "max-uncommit-offset-wait",
+              "sensitive" : false
+            },
+            "group.id" : {
+              "displayName" : "Group ID",
+              "identifiesControllerService" : false,
+              "name" : "group.id",
+              "sensitive" : false
+            },
+            "bootstrap.servers" : {
+              "displayName" : "Kafka Brokers",
+              "identifiesControllerService" : false,
+              "name" : "bootstrap.servers",
+              "sensitive" : false
+            },
+            "topic" : {
+              "displayName" : "Topic Name(s)",
+              "identifiesControllerService" : false,
+              "name" : "topic",
+              "sensitive" : false
+            },
+            "message-demarcator" : {
+              "displayName" : "Message Demarcator",
+              "identifiesControllerService" : false,
+              "name" : "message-demarcator",
+              "sensitive" : false
+            },
+            "key-attribute-encoding" : {
+              "displayName" : "Key Attribute Encoding",
+              "identifiesControllerService" : false,
+              "name" : "key-attribute-encoding",
+              "sensitive" : false
+            },
+            "auto.offset.reset" : {
+              "displayName" : "Offset Reset",
+              "identifiesControllerService" : false,
+              "name" : "auto.offset.reset",
+              "sensitive" : false
+            },
+            "sasl.kerberos.service.name" : {
+              "displayName" : "Kerberos Service Name",
+              "identifiesControllerService" : false,
+              "name" : "sasl.kerberos.service.name",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.kafka.pubsub.ConsumeKafka",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-azure-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "d94169d0-49cb-37ff-a5b8-d1fbb866de93",
+          "name" : "ListAzureBlobStorage",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : -80.8000072191823,
+            "y" : -249.20000747203795
+          },
+          "properties" : {
+            "listing-strategy" : "timestamps",
+            "et-initial-listing-target" : "all",
+            "prefix" : "/data/1/input/row/parquet/CART_LINES",
+            "storage-credentials-service" : "acea3e4b-05bd-319b-a152-b854b2989322",
+            "et-time-window" : "3 hours",
+            "container-name" : "data-container"
+          },
+          "propertyDescriptors" : {
+            "storage-account-name" : {
+              "displayName" : "Storage Account Name",
+              "identifiesControllerService" : false,
+              "name" : "storage-account-name",
+              "sensitive" : true
+            },
+            "listing-strategy" : {
+              "displayName" : "Listing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "listing-strategy",
+              "sensitive" : false
+            },
+            "storage-sas-token" : {
+              "displayName" : "SAS Token",
+              "identifiesControllerService" : false,
+              "name" : "storage-sas-token",
+              "sensitive" : true
+            },
+            "et-initial-listing-target" : {
+              "displayName" : "Entity Tracking Initial Listing Target",
+              "identifiesControllerService" : false,
+              "name" : "et-initial-listing-target",
+              "sensitive" : false
+            },
+            "prefix" : {
+              "displayName" : "Prefix",
+              "identifiesControllerService" : false,
+              "name" : "prefix",
+              "sensitive" : false
+            },
+            "storage-account-key" : {
+              "displayName" : "Storage Account Key",
+              "identifiesControllerService" : false,
+              "name" : "storage-account-key",
+              "sensitive" : true
+            },
+            "proxy-configuration-service" : {
+              "displayName" : "Proxy Configuration Service",
+              "identifiesControllerService" : true,
+              "name" : "proxy-configuration-service",
+              "sensitive" : false
+            },
+            "storage-credentials-service" : {
+              "displayName" : "Storage Credentials",
+              "identifiesControllerService" : true,
+              "name" : "storage-credentials-service",
+              "sensitive" : false
+            },
+            "et-time-window" : {
+              "displayName" : "Entity Tracking Time Window",
+              "identifiesControllerService" : false,
+              "name" : "et-time-window",
+              "sensitive" : false
+            },
+            "container-name" : {
+              "displayName" : "Container Name",
+              "identifiesControllerService" : false,
+              "name" : "container-name",
+              "sensitive" : false
+            },
+            "et-state-cache" : {
+              "displayName" : "Entity Tracking State Cache",
+              "identifiesControllerService" : true,
+              "name" : "et-state-cache",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "DISABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.azure.storage.ListAzureBlobStorage",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.11.4"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "4309e9e1-fc99-39ba-83ad-5fe160eeeda3",
+          "identifier" : "ad644e65-553e-32c9-912b-0a062a95171d",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 743.1999927808176,
+            "y" : 126.79999252796205
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "/Users/nadav/Downloads/test",
+            "Conflict Resolution Strategy" : "fail"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
